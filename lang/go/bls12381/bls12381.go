@@ -36,7 +36,7 @@
 package bls12381
 
 /*
-#cgo CFLAGS: -I ../../../include
+#cgo CFLAGS: -I../../../include
 #cgo LDFLAGS: ${SRCDIR}/pairing.a
 #include <stdlib.h>
 #include <string.h>
