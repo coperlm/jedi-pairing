@@ -1,4 +1,6 @@
-#include <stdint.h>
+#include <iostream>
+#include <cstdint>
+
 #ifdef _WIN32
 #include <windows.h>
 #include <wincrypt.h>
@@ -39,4 +41,28 @@ uint64_t current_time_nanos(void) {
     ts += tp.tv_nsec;
     return ts;
 #endif
+}
+
+int main() {
+    std::cout << "jedi-pairing 库测试程序" << std::endl;
+    
+    // Test random number generation
+    unsigned char random_bytes_buffer[16];
+    random_bytes(random_bytes_buffer, 16);
+    
+    std::cout << "随机字节: ";
+    for (int i = 0; i < 16; i++) {
+        printf("%02x", random_bytes_buffer[i]);
+    }
+    std::cout << std::endl;
+    
+    // Test timing
+    uint64_t start_time = current_time_nanos();
+    uint64_t end_time = current_time_nanos();
+    
+    std::cout << "时间测试: " << (end_time - start_time) << " 纳秒" << std::endl;
+    
+    std::cout << "平台工具测试成功！" << std::endl;
+    
+    return 0;
 }

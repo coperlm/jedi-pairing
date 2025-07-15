@@ -37,7 +37,7 @@
 package lqibe
 
 /*
-#cgo CFLAGS: -I../../../include
+#cgo CFLAGS: -I ../../../include
 #cgo LDFLAGS: ${SRCDIR}/pairing.a
 #include "lqibe/lqibe.h"
 */

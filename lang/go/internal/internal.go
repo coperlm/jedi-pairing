@@ -35,7 +35,7 @@
 package internal
 
 /*
-#cgo CFLAGS: -I../../../include
+#cgo CFLAGS: -I ../../../include
 #cgo LDFLAGS: ${SRCDIR}/pairing.a
 #include <string.h>
 #include "go_utils.h"
